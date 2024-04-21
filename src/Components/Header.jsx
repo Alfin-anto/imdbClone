@@ -28,11 +28,26 @@ function Header() {
     </div>
 
 
+    <div className="relative">
+  <input 
+    style={{width:'100%', maxWidth:'300px', marginRight:'10px', color:'black'}} 
+    required 
+    className="rounded-lg px-2 p-2 self-center md:self-auto h-10 md:w-[300px] lg:w-[400px]"  
+    placeholder="Search" 
+    value={movie} 
+    onChange={(e) => {setMovie(e.target.value)}}
+  />
+  <button 
+    style={{marginRight:'10px'}}  
+    className="absolute right-3 top-3 rounded"
+    onClick={(e) => SubmitMovie(e)}
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" height="1rem" viewBox="0 0 512 512">
+      <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/>
+    </svg>
+  </button>
+</div>
 
-    <div className="relative ">
-    <input style={{width:'100vh',marginRight:'190px',color:'black'}} required className="rounded-lg px-2 p-2 self-center md:self-auto  h-10 w-[180px] md:w-[300px]  "  placeholder="Search" value={movie} onChange={((e)=>{setMovie(e.target.value)})}/>
-    <button style={{marginRight:'190px'}}  className="absolute right-3 top-3 rounded" onClick={((e)=>SubmitMovie(e))}><svg xmlns="http://www.w3.org/2000/svg" height="1rem"   viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg></button>
-    </div>
     <div style={{display:'flex', justifyContent:'space-between'}} className="hidden md:block">
 
 
@@ -46,3 +61,5 @@ function Header() {
 export default Header;
 // 60ffec931d9a2c91a97fb3290d7fc3fc
 //  Read Access Token:eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2MGZmZWM5MzFkOWEyYzkxYTk3ZmIzMjkwZDdmYzNmYyIsInN1YiI6IjY0ZjAzNjk5ZGJiYjQyMDBjNGU5ZjBlNyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.PaFU8TMi5dexteYV7qXZ8VXuNOz3T2hcUVpr06ZNzco
+//onChange={((e)=>{setMovie(e.target.value)})}/>
+// onClick={((e)=>SubmitMovie(e))}
